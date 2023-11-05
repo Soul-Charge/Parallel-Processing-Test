@@ -2,10 +2,13 @@
 // count is "little" or "much"
 function generateBalls(color, count) {
     let minCount, maxCount;
-    // 小球之间的间隔值
-    const ballDistance = 20;
     const ballWidth    = 20;
     const ballHeight   = 20;
+    // 小球之间的间隔值
+    // 生成范围在70到100之间的随机整数
+    const min = 80;
+    const max = 150;
+    const ballDistance = Math.floor(Math.random() * (max - min + 1)) + min;
 
     if (count === 'little') {
         minCount = 10;
@@ -53,9 +56,9 @@ function moveBallsLeft(speed) {
     var moveDistance;
 
     if (speed === "slow") {
-        moveDistance = 1;
+        moveDistance = 2;
     } else if (speed === "fast") {
-        moveDistance = 3;
+        moveDistance = 4;
     } else {
         console.error("无效的速度选项");
         return;
