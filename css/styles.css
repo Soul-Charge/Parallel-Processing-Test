@@ -1,0 +1,122 @@
+:root {
+    --container-width: 800px;
+    --container-height: 400px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.settings {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0px;
+}
+
+.game-area {
+    position: relative;
+    left:0px;
+    top: 0px;
+    /* width: var(--container-width); */
+    /* height: var(--container-height); */
+    width: 100vw;
+    height: var(--container-height);
+}
+
+.blue {
+    background-color: rgba(0, 0, 255, 0.5);
+    width: inherit;
+    height: 50%;
+    margin-bottom: 5px;
+    overflow: hidden;
+    /* 设置相对定位确保小球能正确绝对定位 */
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.red {
+    background-color: rgba(255, 0, 0, 0.5);
+    width: inherit;
+    height: 50%;
+    overflow: hidden;
+    /* 设置相对定位确保小球能正确绝对定位 */
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.divider {
+    position: absolute;
+    width: 100vw;
+    height: 5px;
+    left: 0px;
+    top: 195px;
+
+}
+
+.X {
+    height: 5px;
+    width: 5px;
+}
+
+.lineLeft {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    /* width: calc(var(--container-width) / 2 - 10px); */
+    width: calc(50% - 10px);
+    height: 5px;
+    background-color: black;
+}
+
+.lineRight {
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    /* width: calc(var(--container-width) / 2 - 10px); */
+    width: calc(50% - 10px);
+    height: 5px;
+    background-color: black;
+}
+
+.results {
+    margin: 10px 0px;
+}
+
+/* 共享的基本样式 */
+.button, .input {
+  display: inline-block;
+  padding: 10px 20px;
+  background: none;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+/* 按钮的样式 */
+.button {
+  color: #3498db;
+}
+
+/* 数字输入框的样式 */
+.input {
+  color: #3498db;
+}
+
+/* 共享的按下效果 */
+.button:active, .input:active {
+  background-color: #3498db;
+  color: #fff;
+  transform: scale(0.95); /* 按下时稍微缩小按钮或输入框 */
+}
