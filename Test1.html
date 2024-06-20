@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="settings">
+      <p>球的数量
+        <br>
+        <button id="littleBtn" value="little" class="button">少</button>
+        <button id="muchBtn" value="much" class="button">多</button>
+        <span class="status" id="numberStatus"></span>
+      </p>
+      <p>显示速度
+        <br>
+        <button id="slowBtn" value="slow" class="button">慢</button>
+        <button id="fastBtn" value="fast" class="button">快</button>
+        <span class="status" id="speedStatus"></span>
+      </p>
+      <button id="startBtn" class="button">开始</button>
+    </div>
+    <div class="game-area">
+      <div class="blue" id="blue">
+      </div>
+      <div class="divider">
+        <span class="lineLeft"></span>
+        <span class="X">X</span>
+        <span class="lineRight"></spancla>
+      </div>
+      <div class="red" id="red">
+      </div>
+    </div>
+    <div class="results">
+      <input type="number" id="blueInput" placeholder="输入蓝色小球数量" class="input">
+      <input type="number" id="redInput" placeholder="输入红色小球数量" class="input">
+      <button id="submitBtn" class="button">提交</button>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>

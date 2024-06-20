@@ -120,3 +120,21 @@ body {
   color: #fff;
   transform: scale(0.95); /* 按下时稍微缩小按钮或输入框 */
 }
+
+/* 禁用状态 */
+.button[disabled], .input[disabled] {
+  opacity: 0.5;
+  pointer-events: none; /* 禁用点击事件 */
+}
+
+.status {
+  display: inline-block;
+  padding: 10px 20px;
+  background: none;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  visibility: hidden;
+  transition: transform 0.2s;
+}
