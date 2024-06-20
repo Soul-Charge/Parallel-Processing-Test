@@ -212,3 +212,5 @@ submitBtn.addEventListener("click", function() {
         console.error("无效的输入，必须为数字");
     }
 })
+
+alert("手机建议横屏(｡･∀･)ﾉﾞ");
